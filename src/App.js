@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import LocalSto_react from "./Acomponent/LocalSto_react";
+import LocalSto_redux from "./Acomponent/LocalSto_redux";
+import {BrowserRouter as Router, Route,Switch, NavLink} from 'react-router-dom'
+import store from "./store/Store"
+import {Provider} from 'react-redux'
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Provider store={store}>
+      <Router>
+        <div id="max">
+          <NavLink className="navv" to="/" exact>React Local Storage</NavLink>
+          <NavLink className="navv" to="/reduxlocalstorage" exact>Redux Local Storage</NavLink>
+        </div><hr />
+        <Switch>
+          <Route exact path="/" component={LocalSto_react} />
+          <Route exact path="/reduxlocalstorage" component={LocalSto_redux} />
+        </Switch>
+      </Router>
+    </Provider>
+    </>
   );
 }
 
