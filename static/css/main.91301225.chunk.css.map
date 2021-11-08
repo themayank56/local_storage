@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Style.css"],"names":[],"mappings":"AAAA,KACI,eACJ,CACA,MACI,oBAAqB,CACrB,YAAa,CACb,WACJ","file":"main.91301225.chunk.css","sourcesContent":["#max{\r\n    margin-top: 20px;\r\n}\r\n.navv{\r\n    border: 2px solid red;\r\n    padding: 10px;\r\n    margin: 10px;\r\n}"]}
